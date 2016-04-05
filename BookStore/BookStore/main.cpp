@@ -17,7 +17,6 @@ int main()
 {
 	list<Book> lista;
 	Book ksiazka;
-	char buffor;
 
 	for (int i = 0; i < 2; i++)
 	{
