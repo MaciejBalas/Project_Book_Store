@@ -19,7 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="add.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="remove.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="add.hpp" />
+    <ClInclude Include="remove.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{A8402443-A233-4D25-8CC8-F5F57E9609D0}</ProjectGuid>
