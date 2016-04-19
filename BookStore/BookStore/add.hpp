@@ -6,17 +6,9 @@ using namespace std;
 #include<iostream>
 #include<list>
 #include<string>
+#include "book.hpp"
 
-struct Book
-{
-	unsigned int id;
-	string name;
-	string author;
-	string genre;
-	int in_stock;
-};
-
-list<Book> add_book(list<Book> lista, Book ksiazka);
+list<Book> add_book(list<Book> lista);
 
 #endif // !add_hpp
 

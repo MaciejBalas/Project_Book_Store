@@ -20,11 +20,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="add.cpp" />
+    <ClCompile Include="edit.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="remove.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="add.hpp" />
+    <ClInclude Include="book.hpp" />
+    <ClInclude Include="edit.hpp" />
     <ClInclude Include="remove.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

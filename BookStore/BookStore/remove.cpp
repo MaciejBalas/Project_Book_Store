@@ -12,7 +12,7 @@ list<Book> remove_by_id(list<Book> lista)
 	for (iter = lista.begin(); iter != lista.end(); iter++)
 	{
 		if (iter->id == search_id)
-			lista.erase(iter);
+			iter=lista.erase(iter);
 	}
 	
 	return lista;
@@ -30,7 +30,7 @@ list<Book> remove_by_name(list<Book> lista)
 	{
 		if (iter->name == search_name)
 		{
-			lista.erase(iter);
+			iter=lista.erase(iter);
 		}
 	}
 
@@ -49,7 +49,7 @@ list<Book> remove_by_author(list<Book> lista)
 	{
 		if (iter->author == search_author)
 		{
-			lista.erase(iter);
+			iter=lista.erase(iter);
 		}
 	}
 
@@ -68,8 +68,26 @@ list<Book> remove_by_genre(list<Book> lista)
 	{
 		if (iter->author == search_genre)
 		{
-			lista.erase(iter);
+			iter=lista.erase(iter);
 		}
+	}
+
+	return lista;
+}
+
+list<Book> remove_by_stock(list<Book> lista)
+{
+	list<Book>::iterator iter;
+	int search_stock;
+
+	cout << "Please enter the id to remove";
+	cin >> search_stock;
+	cin.ignore();
+
+	for (iter = lista.begin(); iter != lista.end(); iter++)
+	{
+		if (iter->id == search_stock)
+			iter = lista.erase(iter);
 	}
 
 	return lista;
