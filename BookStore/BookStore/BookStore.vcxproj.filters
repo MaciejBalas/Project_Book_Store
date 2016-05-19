@@ -27,6 +27,9 @@
     <ClCompile Include="edit.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="load.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="remove.hpp">
@@ -39,6 +42,9 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="book.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="load.hpp">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

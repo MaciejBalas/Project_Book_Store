@@ -5,7 +5,7 @@
 struct Book
 {
 	unsigned int id;
-	std::string name;
+	std::string title;
 	std::string author;
 	std::string genre;
 	int in_stock;

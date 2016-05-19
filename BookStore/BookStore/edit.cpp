@@ -53,7 +53,7 @@ list<Book> edit_by_id(list<Book> lista)
 				case 2: 
 				{ 
 					cout << "enter name: ";
-					getline(cin, iter->name); 
+					getline(cin, iter->title); 
 					break;
 				}
 				case 3:
@@ -75,7 +75,7 @@ list<Book> edit_by_id(list<Book> lista)
 					cin.ignore();
 
 					cout << "enter name: ";
-					getline(cin, iter->name);
+					getline(cin, iter->title);
 
 					cout << "enter author: ";
 					getline(cin, iter->author);
@@ -109,7 +109,7 @@ list<Book> edit_by_name(list<Book> lista)
 
 	for (iter = lista.begin(); iter != lista.end(); iter++)
 	{
-		if (iter->name == search_name)
+		if (iter->title == search_name)
 		{
 
 			cout << "Book Found! do you want to [1]: Edit stock [2]: Edit name [3]: Edit author [4]: Edit genre [5]: Edit all? :  ";
@@ -128,7 +128,7 @@ list<Book> edit_by_name(list<Book> lista)
 			case 2:
 			{
 				cout << "enter name: ";
-				getline(cin, iter->name);
+				getline(cin, iter->title);
 			}
 			case 3:
 			{
@@ -147,7 +147,7 @@ list<Book> edit_by_name(list<Book> lista)
 				cin.ignore();
 
 				cout << "enter name: ";
-				getline(cin, iter->name);
+				getline(cin, iter->title);
 
 				cout << "enter author: ";
 				getline(cin, iter->author);

@@ -8,12 +8,12 @@ using namespace std;
 #include<string>
 #include "book.hpp"
 
-list<Book> remove_menu(list<Book> lista);
+//list<Book> remove_menu(list<Book> lista);
 
-list<Book> remove_by_id(list<Book> lista);
-list<Book> remove_by_name(list<Book> lista);
-list<Book> remove_by_author(list<Book> lista);
-list<Book> remove_by_genre(list<Book> lista);
-list<Book> remove_by_stock(list<Book> lista);
+void remove_by_id(list<Book> &list_id, list<Book> &list_title, list<Book> &list_author, list<Book> &list_genre, list<Book> &list_stock);
+void remove_by_name(list<Book> &list_id, list<Book> &list_title, list<Book> &list_author, list<Book> &list_genre, list<Book> &list_stock);
+void remove_by_author(list<Book> &list_id, list<Book> &list_title, list<Book> &list_author, list<Book> &list_genre, list<Book> &list_stock);
+void remove_by_genre(list<Book> &list_id, list<Book> &list_title, list<Book> &list_author, list<Book> &list_genre, list<Book> &list_stock);
+void remove_by_stock(list<Book> &list_id, list<Book> &list_title, list<Book> &list_author, list<Book> &list_genre, list<Book> &list_stock);
 
 #endif

@@ -1,6 +1,6 @@
 #include "remove.hpp"
 
-list<Book> remove_by_id(list<Book> lista)
+void remove_by_id(list<Book> &list_id, list<Book> &list_title, list<Book> &list_author, list<Book> &list_genre, list<Book> &list_stock)
 {
 	list<Book>::iterator iter;
 	int search_id;
@@ -9,35 +9,78 @@ list<Book> remove_by_id(list<Book> lista)
 	cin >> search_id;
 	cin.ignore();
 
-	for (iter = lista.begin(); iter != lista.end(); iter++)
+	for (iter = list_id.begin(); iter != list_id.end(); iter++)
 	{
 		if (iter->id == search_id)
-			iter=lista.erase(iter);
+			iter = list_id.erase(iter);
 	}
-	
-	return lista;
+
+	for (iter = list_title.begin(); iter != list_title.end(); iter++)
+	{
+		if (iter->id == search_id)
+			iter = list_title.erase(iter);
+	}
+
+	for (iter = list_author.begin(); iter != list_author.end(); iter++)
+	{
+		if (iter->id == search_id)
+			iter = list_author.erase(iter);
+	}
+
+	for (iter = list_genre.begin(); iter != list_genre.end(); iter++)
+	{
+		if (iter->id == search_id)
+			iter = list_genre.erase(iter);
+	}
+
+	for (iter = list_stock.begin(); iter != list_stock.end(); iter++)
+	{
+		if (iter->id == search_id)
+			iter = list_stock.erase(iter);
+	}
 }
 
-list<Book> remove_by_name(list<Book> lista)
+void remove_by_name(list<Book> &list_id, list<Book> &list_title, list<Book> &list_author, list<Book> &list_genre, list<Book> &list_stock)
 {
 	list<Book>::iterator iter;
-	string search_name;
+	string search_title;
 
 	cout << "Please enter name of the book to remove";
-	getline(cin, search_name);
+	getline(cin, search_title);
 
-	for (iter = lista.begin(); iter != lista.end(); iter++)
+	for (iter = list_id.begin(); iter != list_id.end(); iter++)
 	{
-		if (iter->name == search_name)
-		{
-			iter=lista.erase(iter);
-		}
+		if (iter->title == search_title)
+			iter = list_id.erase(iter);
 	}
 
-	return lista;
+	for (iter = list_title.begin(); iter != list_title.end(); iter++)
+	{
+		if (iter->title == search_title)
+			iter = list_title.erase(iter);
+	}
+
+	for (iter = list_author.begin(); iter != list_author.end(); iter++)
+	{
+		if (iter->title == search_title)
+			iter = list_author.erase(iter);
+	}
+
+	for (iter = list_genre.begin(); iter != list_genre.end(); iter++)
+	{
+		if (iter->title == search_title)
+			iter = list_genre.erase(iter);
+	}
+
+	for (iter = list_stock.begin(); iter != list_stock.end(); iter++)
+	{
+		if (iter->title == search_title)
+			iter = list_stock.erase(iter);
+	}
+
 }
 
-list<Book> remove_by_author(list<Book> lista)
+void remove_by_author(list<Book> &list_id, list<Book> &list_title, list<Book> &list_author, list<Book> &list_genre, list<Book> &list_stock)
 {
 	list<Book>::iterator iter;
 	string search_author;
@@ -45,18 +88,38 @@ list<Book> remove_by_author(list<Book> lista)
 	cout << "Please enter name of author to remove";
 	getline(cin, search_author);
 
-	for (iter = lista.begin(); iter != lista.end(); iter++)
+	for (iter = list_id.begin(); iter != list_id.end(); iter++)
 	{
 		if (iter->author == search_author)
-		{
-			iter=lista.erase(iter);
-		}
+			iter = list_id.erase(iter);
 	}
 
-	return lista;
+	for (iter = list_title.begin(); iter != list_title.end(); iter++)
+	{
+		if (iter->author == search_author)
+			iter = list_title.erase(iter);
+	}
+
+	for (iter = list_author.begin(); iter != list_author.end(); iter++)
+	{
+		if (iter->author == search_author)
+			iter = list_author.erase(iter);
+	}
+
+	for (iter = list_genre.begin(); iter != list_genre.end(); iter++)
+	{
+		if (iter->author == search_author)
+			iter = list_genre.erase(iter);
+	}
+
+	for (iter = list_stock.begin(); iter != list_stock.end(); iter++)
+	{
+		if (iter->author == search_author)
+			iter = list_stock.erase(iter);
+	}
 }
 
-list<Book> remove_by_genre(list<Book> lista)
+void remove_by_genre(list<Book> &list_id, list<Book> &list_title, list<Book> &list_author, list<Book> &list_genre, list<Book> &list_stock)
 {
 	list<Book>::iterator iter;
 	string search_genre;
@@ -64,18 +127,38 @@ list<Book> remove_by_genre(list<Book> lista)
 	cout << "Please enter name of author to remove";
 	getline(cin, search_genre);
 
-	for (iter = lista.begin(); iter != lista.end(); iter++)
+	for (iter = list_id.begin(); iter != list_id.end(); iter++)
 	{
-		if (iter->author == search_genre)
-		{
-			iter=lista.erase(iter);
-		}
+		if (iter->genre == search_genre)
+			iter = list_id.erase(iter);
 	}
 
-	return lista;
+	for (iter = list_title.begin(); iter != list_title.end(); iter++)
+	{
+		if (iter->genre == search_genre)
+			iter = list_title.erase(iter);
+	}
+
+	for (iter = list_author.begin(); iter != list_author.end(); iter++)
+	{
+		if (iter->genre == search_genre)
+			iter = list_author.erase(iter);
+	}
+
+	for (iter = list_genre.begin(); iter != list_genre.end(); iter++)
+	{
+		if (iter->genre == search_genre)
+			iter = list_genre.erase(iter);
+	}
+
+	for (iter = list_stock.begin(); iter != list_stock.end(); iter++)
+	{
+		if (iter->genre == search_genre)
+			iter = list_stock.erase(iter);
+	}
 }
 
-list<Book> remove_by_stock(list<Book> lista)
+void remove_by_stock(list<Book> &list_id, list<Book> &list_title, list<Book> &list_author, list<Book> &list_genre, list<Book> &list_stock)
 {
 	list<Book>::iterator iter;
 	int search_stock;
@@ -84,11 +167,33 @@ list<Book> remove_by_stock(list<Book> lista)
 	cin >> search_stock;
 	cin.ignore();
 
-	for (iter = lista.begin(); iter != lista.end(); iter++)
+	for (iter = list_id.begin(); iter != list_id.end(); iter++)
 	{
-		if (iter->id == search_stock)
-			iter = lista.erase(iter);
+		if (iter->in_stock == search_stock)
+			iter = list_id.erase(iter);
 	}
 
-	return lista;
+	for (iter = list_title.begin(); iter != list_title.end(); iter++)
+	{
+		if (iter->in_stock == search_stock)
+			iter = list_title.erase(iter);
+	}
+
+	for (iter = list_author.begin(); iter != list_author.end(); iter++)
+	{
+		if (iter->in_stock == search_stock)
+			iter = list_author.erase(iter);
+	}
+
+	for (iter = list_genre.begin(); iter != list_genre.end(); iter++)
+	{
+		if (iter->in_stock == search_stock)
+			iter = list_genre.erase(iter);
+	}
+
+	for (iter = list_stock.begin(); iter != list_stock.end(); iter++)
+	{
+		if (iter->in_stock == search_stock)
+			iter = list_stock.erase(iter);
+	}
 }

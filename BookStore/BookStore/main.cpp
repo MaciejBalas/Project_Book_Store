@@ -5,6 +5,7 @@
 #include "remove.hpp"
 #include "edit.hpp"
 #include "book.hpp"
+#include "load.hpp"
 
 using namespace std;
 
@@ -14,14 +15,11 @@ void show(list<Book> lista)
 	
 	for (iter = lista.begin(); iter != lista.end(); iter++)
 	{
-		cout << iter->id << "  '" << iter->name << " " << iter->author << " " << iter->genre << " " << iter->in_stock << endl;
+		cout << iter->id << "  " << iter->title << " " << iter->author << " " << iter->genre << " " << iter->in_stock << endl;
 	}
 }
 
-int main()
-{
-	list<Book> lista;
-	int choice;
+/*	int choice;
 
 	while (choice!=0)
 	{
@@ -41,8 +39,31 @@ int main()
 			lista = edit_menu(lista); break;
 		}
 
-	}
+	}*/
+
+/////////////////////////////////////////////////////////TO DO
+/*
+editing
+saving
+sorting
+menus!
+*/
+
+
+int main()
+{	
 	
+	list<Book> list_id,list_title,list_author,list_genre,list_stock;
+	
+	list_id = load("db_id.txt");
+	list_title = load("db_title.txt");
+	list_author = load("db_author.txt");
+	list_genre = load("db_genre.txt");
+	list_stock = load("db_stock.txt");
+
+	add_book(list_id, list_title, list_author, list_genre, list_stock);
+
+	show(list_title);
 
 	getchar();
 	return 0;
